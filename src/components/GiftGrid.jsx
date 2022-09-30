@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GiftItem } from "./GiftItem";
+import PropTypes from 'prop-types';
 
 export const GiftGrid = ({ category }) => {
 
@@ -16,7 +17,7 @@ export const GiftGrid = ({ category }) => {
                 isLoading && ( <h2>Cargando 2...</h2> )
             }
             
-            <div className="card-grid">
+            <div className="card-grid" aria-label="cardgrid">
                 {   
                     images.map( image => (
                         <GiftItem 
@@ -29,4 +30,8 @@ export const GiftGrid = ({ category }) => {
         </>
         
     )
+}
+
+GiftGrid.propTypes = {
+    category: PropTypes.string.isRequired
 }

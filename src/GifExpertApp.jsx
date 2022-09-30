@@ -3,7 +3,7 @@ import { AddCategory, GiftGrid } from './components';
 
 export const GifExpertApp = () => {
 
-  const [categories, setCategories] = useState(['gta 6']);
+  const [categories, setCategories] = useState([]);
 
   const onAddCategory = (newCategory) => {
     //if( categories.includes(newCategory) ) return;
